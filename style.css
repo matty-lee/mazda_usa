@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+/* TABLE OF CONTENTS */
+
+/* =====================
+1. Variables
+2. Global Styles
+3. Reused css components
+4. 
+5. 
+6. 
+7. 
+====================== */
+
+/* =======================
+1. VARIABLES
+=========================*/
+
+:root {
+  --clr-primary: #868686;
+  --clr-secondary: #0f0f0f;
+  --clr-primary-dark: #333333;
+  --clr-primary-light: #c0c0c0;
+  --ff-primary: 'Lato', sans-serif;
+  --transition: all 0.4s linear;
+}
+
+/* =======================
+2. GLOBAL STYLES
+=========================*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  color: var(--clr-primary);
+  font-family: var(--ff-primary);
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* =======================
+3. RE-USED CSS COMPONENTS
+=========================*/
+
+.btn {
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  background-color: #ffffff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* =======================
+4. HEADER
+=========================*/
+
+header {
+  color: #ffffff;
+}
+
+.navbar {
+  height: 120px;
+  background-color: #252525;
+}
+
+.nav-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 45px;
+}
+
+.logo {
+  height: 120px;
+  width: auto;
+  position: relative;
+}
+
+.right-nav-container {
+  text-align: right;
+  text-transform: uppercase;
+  position: absolute;
+  right: 45px;
+  top: 2rem;
+}
+
+.location-icon {
+  margin-left: 5px;
+}
+
+.top-ul li,
+.bottom-ul li {
+  display: inline-block;
+  list-style: none;
+}
+
+.top-ul li a {
+  text-decoration: none;
+  color: var(--clr-primary);
+  font-size: 0.9rem;
+  transition: var(--transition);
+  letter-spacing: 1px;
+}
+.bottom-ul li a {
+  text-decoration: none;
+  color: var(--clr-primary-light);
+  font-size: 1rem;
+  margin-left: 1rem;
+  letter-spacing: 2px;
+  transition: var(--transition);
+}
+
+.top-ul li a:hover,
+.bottom-ul li a:hover {
+  color: white;
+}
+
+.top-ul li {
+  margin-left: 20px;
+}
+
+.bottom-ul li {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.slider-container {
+  height: 90vh;
+  width: 100%;
+  background-color: pink;
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.prevBtn,
+.nextBtn {
+  position: absolute;
+  color: #ffffff;
+  top: 40%;
+  font-size: 4rem;
+  z-index: 999;
+  background: transparent;
+  border-color: transparent;
+  outline: none;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.prevBtn {
+  left: 3rem;
+}
+
+.nextBtn {
+  right: 3rem;
+}
+
+.header-btn{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 85%;
+}
+
+.slide {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  transition: all 1s ease-in-out;
+
+}
+
+.slide h3 {
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+.slide h1 {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  word-spacing: 10px;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+}
+
+.slide:nth-child(1) {
+  background-image: linear-gradient(#0000005d, #00000000),
+    url(./img/header1.jpg);
+  background-size: cover;
+  background-position: top;
+}
+.slide:nth-child(2) {
+  background-image: linear-gradient(#0000003d, #0000002a),
+    url(./img/header2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.slide:nth-child(3) {
+  background-image: url(./img/header3.jpg);
+  background-size: cover;
+  background-position: bottom;
+}
+
