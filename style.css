@@ -72,7 +72,7 @@ html {
 
 .btn:hover {
   color: white;
-  background-color: var(--clr-primary-dark);
+  background-color: var(--clr-primary);
   cursor: pointer;
   transition: var(--transition);
 }
@@ -133,7 +133,6 @@ header {
 .hidden-links li {
   display: inline-block;
   font-size: 1.2rem;
-  margin-left: 2rem;
 }
 
 .hidden-links li a {
@@ -144,6 +143,12 @@ header {
 .location-icon,
 .menu-icon {
   margin-left: 5px;
+}
+
+.spacer {
+  font-size: 1.5rem;
+  margin: 1rem;
+  color: var(--clr-primary);
 }
 
 .top-ul li,
@@ -184,7 +189,7 @@ header {
 
 .slider-container {
   height: 90vh;
-  width: 100%;
+  width: auto;
   position: relative;
 }
 
@@ -247,6 +252,29 @@ header {
   margin-bottom: 0.8rem;
 }
 
+@media screen and (max-width: 650px) {
+  .slide h3 {
+    font-size: 1rem;
+  }
+
+  .slide h1 {
+    font-size: 1.8rem;
+  }
+
+  .prevBtn,
+  .nextBtn {
+    font-size: 2.5rem;
+  }
+
+  .prevBtn {
+    left: 2rem;
+  }
+
+  .nextBtn {
+    right: 2rem;
+  }
+}
+
 .slide:nth-child(1) {
   background-image: linear-gradient(#0000005d, #00000000),
     url(./img/header1.jpg);
@@ -260,9 +288,9 @@ header {
   background-position: center;
 }
 .slide:nth-child(3) {
-  background-image: url(./img/header3.jpg);
+  background-image: linear-gradient(#000000a6,#00000000,#00000000),url(./img/header3.jpg);
   background-size: cover;
-  background-position: bottom;
+  background-position: center ;
 }
 .slide:nth-child(4) {
   background-image: url(./img/header4.jpeg);
@@ -294,7 +322,7 @@ header {
 }
 
 /* =======================
-5. IISH SETION
+5. IISH SECTION
 =========================*/
 
 .iihs-outer {
@@ -309,6 +337,12 @@ header {
 
 .iihs-award {
   height: 50px;
+}
+
+@media screen and (max-width: 650px) {
+  .iihs-award {
+    height: 30px;
+  }
 }
 
 .iihs-main {

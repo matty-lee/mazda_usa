@@ -5,24 +5,34 @@ const prevBtn = getElement('.prevBtn');
 const nextBtn = getElement('.nextBtn');
 let slideCounter = 1;
 
-nextBtn.addEventListener('click', function () {
+const autoChange = function () {
   slideCounter++;
-  if (slideCounter > slides.length) {
-    slideCounter = 1;
-  }
   slideTransition();
+};
+
+let interval = setInterval(autoChange, 100000);
+
+nextBtn.addEventListener('click', function () {
+  clearInterval(interval);
+  slideCounter++;
+  slideTransition();
+  interval = setInterval(autoChange, 100000);
 });
 
 prevBtn.addEventListener('click', function () {
+  clearInterval(interval);
   slideCounter--;
-  if (slideCounter < 1) {
-    slideCounter = slides.length;
-  }
-  console.log(slideCounter);
   slideTransition();
+  interval = setInterval(autoChange, 100000);
 });
 
 function slideTransition() {
+  if (slideCounter > slides.length) {
+    slideCounter = 1;
+  }
+  if (slideCounter < 1) {
+    slideCounter = slides.length;
+  }
   const currentSlide = getElement(`.slide:nth-child(${slideCounter}`);
   slides.forEach(function (slide) {
     slide.classList.add('hide-slide');
