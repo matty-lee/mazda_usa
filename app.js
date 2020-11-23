@@ -10,7 +10,6 @@ nextBtn.addEventListener('click', function () {
   if (slideCounter > slides.length) {
     slideCounter = 1;
   }
-  console.log(slideCounter);
   slideTransition();
 });
 

@@ -21,6 +21,7 @@
   --clr-secondary: #0f0f0f;
   --clr-primary-dark: #333333;
   --clr-primary-light: #c0c0c0;
+  --clr-light-grey: #f0f0f0;
   --ff-primary: 'Lato', sans-serif;
   --transition: all 0.4s linear;
 }
@@ -111,7 +112,37 @@ header {
   top: 2rem;
 }
 
-.location-icon {
+.right-nav-container2 {
+  position: absolute;
+  z-index: 999;
+  right: 45px;
+  top: 3.5rem;
+  visibility: hidden;
+  /* background-color: yellow; */
+}
+@media screen and (max-width: 1000px) {
+  .right-nav-container {
+    visibility: hidden;
+  }
+
+  .right-nav-container2 {
+    visibility: visible;
+  }
+}
+
+.hidden-links li {
+  display: inline-block;
+  font-size: 1.2rem;
+  margin-left: 2rem;
+}
+
+.hidden-links li a {
+  text-decoration: none;
+  color: var(--clr-primary-light);
+}
+
+.location-icon,
+.menu-icon {
   margin-left: 5px;
 }
 
@@ -125,7 +156,7 @@ header {
   text-decoration: none;
   color: var(--clr-primary);
   font-size: 0.9rem;
-  transition: var(--transition);
+  transition: color 0.4s linear;
   letter-spacing: 1px;
 }
 .bottom-ul li a {
@@ -134,7 +165,7 @@ header {
   font-size: 1rem;
   margin-left: 1rem;
   letter-spacing: 2px;
-  transition: var(--transition);
+  transition: color 0.4s linear;
 }
 
 .top-ul li a:hover,
@@ -232,4 +263,76 @@ header {
   background-image: url(./img/header3.jpg);
   background-size: cover;
   background-position: bottom;
+}
+.slide:nth-child(4) {
+  background-image: url(./img/header4.jpeg);
+  background-size: cover;
+  background-position: bottom;
+}
+
+/* =======================
+5. RECTANGLE LINKS
+=========================*/
+
+.rect-links {
+  padding: 2rem 4rem;
+}
+
+.link-container {
+  background-color: var(--clr-light-grey);
+  height: 9rem;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.link-container i {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+/* =======================
+5. IISH SETION
+=========================*/
+
+.iihs-outer {
+  background-color: var(--clr-primary-dark);
+  padding: 5rem 0;
+}
+
+.iihs-inner {
+  text-align: center;
+  color: var(--clr-light-grey);
+}
+
+.iihs-award {
+  height: 50px;
+}
+
+.iihs-main {
+  width: 100%;
+}
+
+.iihs-inner h3 {
+  margin: 2rem auto 0.5rem auto;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  letter-spacing: 4px;
+}
+
+.iihs-middle-text {
+  margin: 2rem;
+  line-height: 30px;
+  font-size: 1.1rem;
+}
+
+.iihs-button-container {
+  margin-top: 3rem;
+}
+.iihs-button-container a {
+  text-decoration: none;
+  margin: 0.5rem;
 }
